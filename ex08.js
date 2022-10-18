@@ -41,29 +41,47 @@ Se o cliente não recebeu desconto, imprima na tela um agradecimento pela compra
 
 function desconto (nome,valor,primeiracompra,pagametoavista){
 
+
+
     if(primeiracompra && pagametoavista){
         if (valor > 1000){
-            console.log(`Sua compra ficou ${valor - 30/100}`)
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  30% de desconto, o valor da sua compra ficou em ${(valor*0.7).toFixed(2)}, Obrigado volte sempre !!`)
         }
-        else if (valor < 500){
-            console.log(`Sua compra ficou ${valor - 25/100}`)
+        else if (valor  < 1000 || valor > 500){
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 25% de desconto, então sua compra ficou ${(valor*0.8).toFixed(2)}, Obrigado Volte sempre!!`)
         }
         else{
-            console.log(`Sua compra ficou ${valor - 20/100}`)
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 20% de desconto, então sua compra ficou ${(valor*0.75).toFixed(2)}, Obrigado Volte sempre!!`)
         }
 
     }
     if(primeiracompra && !pagametoavista){
-        
+        if(valor > 1000){
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 20% de desconto, então sua compra ficou ${(valor*0.75).toFixed(2)}, Obrigado Volte sempre!!`)
+        }else if (valor  < 1000 || valor > 500){
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 15% de desconto, então sua compra ficou ${(valor*0.85).toFixed(2)}, Obrigado Volte sempre!!`)
+        }else{
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 10% de desconto, então sua compra ficou ${(valor*0.05).toFixed(2)}, Obrigado Volte sempre!!`)
+        }
     }
     if(!primeiracompra && pagametoavista){
-        
+        if(valor > 1000){
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 20% de desconto, então sua compra ficou ${(valor*0.75).toFixed(2)}, Obrigado Volte sempre!!`)
+        }else if (valor  < 1000 || valor > 500){
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 15% de desconto, então sua compra ficou ${(valor*0.85).toFixed(2)}, Obrigado Volte sempre!!`)
+        }else{
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 10% de desconto, então sua compra ficou ${(valor*0.05).toFixed(2)}, Obrigado Volte sempre!!`)
+        }
     }
     if(!primeiracompra && !pagametoavista){
-        if (valor > 1000){}
+        if (valor > 1000){
+            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 10% de desconto, então sua compra ficou ${(valor*0.75).toFixed(2)}, Obrigado Volte sempre!!`)
+        }
         else if (valor < 500){
             Math.random()*(20 - 10 )+10
         }
         else{}
     }
 }
+
+desconto(`Lucas`, 1500, false, false)
