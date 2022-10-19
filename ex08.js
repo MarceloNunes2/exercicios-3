@@ -45,43 +45,58 @@ function desconto (nome,valor,primeiracompra,pagametoavista){
 
     if(primeiracompra && pagametoavista){
         if (valor > 1000){
-            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  30% de desconto, o valor da sua compra ficou em ${(valor*0.7).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  30% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.30)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.30}.`)
         }
-        else if (valor  < 1000 || valor > 500){
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 25% de desconto, então sua compra ficou ${(valor*0.8).toFixed(2)}, Obrigado Volte sempre!!`)
+        else if (valor > 500){
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  25% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.25)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.25}.`)
         }
         else{
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 20% de desconto, então sua compra ficou ${(valor*0.75).toFixed(2)}, Obrigado Volte sempre!!`)
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  20% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.20)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.20}.`)
         }
 
     }
     if(primeiracompra && !pagametoavista){
         if(valor > 1000){
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 20% de desconto, então sua compra ficou ${(valor*0.75).toFixed(2)}, Obrigado Volte sempre!!`)
-        }else if (valor  < 1000 || valor > 500){
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 15% de desconto, então sua compra ficou ${(valor*0.85).toFixed(2)}, Obrigado Volte sempre!!`)
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  20% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.20)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.20}.`)
+        }else if (valor > 500){
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  15% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.15)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.15}.`)
         }else{
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 10% de desconto, então sua compra ficou ${(valor*0.05).toFixed(2)}, Obrigado Volte sempre!!`)
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  10% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.10)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.10}.`)
         }
     }
     if(!primeiracompra && pagametoavista){
         if(valor > 1000){
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 20% de desconto, então sua compra ficou ${(valor*0.75).toFixed(2)}, Obrigado Volte sempre!!`)
-        }else if (valor  < 1000 || valor > 500){
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 15% de desconto, então sua compra ficou ${(valor*0.85).toFixed(2)}, Obrigado Volte sempre!!`)
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  20% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.20)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.20}.`)
+        }else if (valor > 500){
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  15% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.15)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.15}.`)
         }else{
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 10% de desconto, então sua compra ficou ${(valor*0.05).toFixed(2)}, Obrigado Volte sempre!!`)
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  10% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.10)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.10}.`)
         }
     }
     if(!primeiracompra && !pagametoavista){
         if (valor > 1000){
-            console.log(`Parabéns ${nome} pela compra, como sua compra foi no valor de  R$ ${valor}, você obteve um cupom de 10% de desconto, então sua compra ficou ${(valor*0.75).toFixed(2)}, Obrigado Volte sempre!!`)
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  10% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.10)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.10}.`)
+        }else if (valor > 500){
+            console.log(`Parabens ${nome} pela compra, como você gastou  R$ ${valor}, você tera um cupom de  5% de desconto, o valor da sua compra ficou em ${(valor - (valor * 0.05)).toFixed(2)}, Obrigado volte sempre !!`)
+            console.log(`Valor do seu desconto ${ valor*0.05}.`)
         }
         else if (valor < 500){
-            Math.random()*(20 - 10 )+10
+                console.log(`Infelizmente você nao tem direito a desconto, Porem na sua proxima compra seu desconto séra de `,Math.trunc(Math.random()*(20 - 10 )+10),`%`)
         }
-        else{}
+        else{
+            console.log(`Dados inseridos não são validos. Favor tentar novamente.`)
+        }
     }
 }
 
-desconto(`Lucas`, 1500, false, false)
+desconto("lucas")
